@@ -159,7 +159,7 @@ Rectangle {
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 2
-        anchors.topMargin: 0
+        anchors.topMargin: appWindow.persistentSettings.customDecorations ? 30 : 0
         spacing: 0
 
 
@@ -178,7 +178,7 @@ Rectangle {
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.verticalCenterOffset: -5
                 anchors.left: parent.left
-                anchors.leftMargin: 40
+                anchors.leftMargin: appWindow.persistentSettings.customDecorations ? 20 : 40
                 source: "images/moneroLogo2.png"
             }
 
