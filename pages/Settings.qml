@@ -338,7 +338,11 @@ Rectangle {
             CheckBox {
                 id: customDecorationsCheckBox
                 checked: persistentSettings.customDecorations
-                onClicked: persistentSettings.customDecorations = checked
+                onClicked: {
+                  persistentSettings.customDecorations = checked
+                  appWindow.hide()
+                  appWindow.show()
+                }
                 text: qsTr("Custom decorations") + translationManager.emptyString
                 checkedIcon: "../images/checkedVioletIcon.png"
                 uncheckedIcon: "../images/uncheckedIcon.png"
